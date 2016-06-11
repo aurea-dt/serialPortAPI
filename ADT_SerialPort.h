@@ -20,6 +20,7 @@
 #include <unistd.h>
 #include <termios.h> // POSIX terminal control definitionss
 #include <string>
+
 using namespace std;
 //------------------------------------------------------------------------------
 
@@ -40,7 +41,7 @@ class ADT_SerialPort
 
  public:
 	int config(int speed, const char* settings);
- 	int sendData(const unsigned char* data, unsigned int length) const;
+ 	int sendData(unsigned char* data, unsigned int length) const;
  	int sendData(const char* data, unsigned int length) const;
  	int sendData(string data) const;
  	ADT_SerialPort(const char* device, int speed, const char* settings);
